@@ -1,0 +1,14 @@
+{
+  "name": "inter-renderer-communication",
+  "version": "1.0.0",
+  "description": "Electron test app: communication between two renderer processes.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Mikaeru",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^1.7.9"
+  }
+}

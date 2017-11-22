@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Window 2</title>
+  </head>
+  <body>
+    <h1>Window 2</h1>
+	<button type="button" class="send-message">Send Message to Window 1</button>
+	<script>
+		const { remote, ipcRenderer } = require ('electron');
+		//
+		const window1 = remote.getGlobal ('window1');
+		let button = document.querySelector ('.send-message');
+		button.addEventListener ('click', () => { window1.send ('message', "Message from Window 2"); });
+		//
+		ipcRenderer.on ('message', (event, message) => { console.log (message); });
+	</script>
+  </body>
+</html>
