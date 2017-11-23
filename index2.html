@@ -14,7 +14,7 @@
         button.addEventListener ('click', () =>
         {
             let window1 = remote.getGlobal ('window1');
-            if (window1) window1.send ('message', "Message from Window 2");
+            if (window1) window1.webContents.send ('message', "Message from Window 2");
         });
         //
         ipcRenderer.on ('message', (event, message) => { console.log (message); });
