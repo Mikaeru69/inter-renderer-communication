@@ -2,6 +2,6 @@
 
 Electron test app: communication between two renderer processes.
 
-# Licence
+# License
 
 MIT
